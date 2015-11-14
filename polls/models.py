@@ -34,7 +34,8 @@ class Course(models.Model):
     location=models.CharField(max_length=30,default=True)
     capcity=models.IntegerField(default=True)
     registered=models.IntegerField(default=True)
-    time=models.TimeField(default=True)
+    start_time=models.TimeField(default=True)
+    end_time=models.TimeField(default=True)
     # how to add multiple choices?
     days=models.CharField(max_length=30,default=True)
     credits=models.FloatField(default=True)
