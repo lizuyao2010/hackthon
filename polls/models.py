@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Student(models.Model):
+    student_id = models.CharField(max_length=30,primary_key=True,default=True)
     first_name = models.CharField(max_length=30,default=True)
     last_name = models.CharField(max_length=30,default=True)
     GENDER = (
@@ -36,6 +37,7 @@ class Course(models.Model):
     time=models.TimeField(default=True)
     # how to add multiple choices?
     days=models.CharField(max_length=30,default=True)
+    credits=models.FloatField(default=True)
     students=models.ManyToManyField(Student)
 
 
